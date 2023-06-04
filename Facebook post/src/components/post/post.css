@@ -1,0 +1,54 @@
+.post{
+    width: 400px;
+    /* height: 400px; */
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    
+}
+.post-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+}
+.post-profile{
+    background-color: white;
+}
+.profile-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+.post-name h4 , p {
+    background-color: white;
+}
+.post-caption p{
+    padding: 10px;
+    background-color: white;
+}
+.post-img{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.post-footer{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.post-footer div{
+    display: flex;
+    gap: 5px;
+    background-color: white;
+}
+hr{
+    margin-left: 10px;
+    margin-right: 10px;
+}
