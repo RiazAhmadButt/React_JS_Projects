@@ -1,0 +1,49 @@
+.portfolio-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-decoration: double underline 3px #01959a;
+}
+.portfolio-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+.p-item:hover{
+    width: 270px;
+    height: 290px;
+    border-radius: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.p-item{
+    width: 250px;
+    height: 280px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.food-img{
+    width: 200px;
+    height: 200px;
+}
+.foodApp-img{
+    width: 200px;
+    height: 200px;
+}
+.item-data{
+    padding: 10px;
+}
