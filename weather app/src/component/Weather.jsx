@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react';
+import './weather.css'
 
 export const Weather = () => {
 
@@ -11,29 +12,33 @@ export const Weather = () => {
     e.preventDefault();
     console.log("I am click handler")
     axios.get(`https://api.weatherbit.io/v2.0/current?city=${cityName}&units=matrics&key=ff1d845976ac4e0aa75fb4c10a59425c&include=minutely`)
-    .then((response) =>{
-      console.log("Response",response.data.data[0].app_temp)
-      setWeatherData(response.data)
-    })
-    .catch((err) =>{
-      console.log(err , "Error")
-    })
+      .then((response) => {
+        setWeatherData(response.data);
+      })
+      .catch((err) => {
+        console.log(err, "Error")
+      })
   }
   return (
     <>
-      <form action="" onSubmit={submitHandler}>
-        <input type="text" placeholder='Enter your city Name' onChange={(e)=>{
-          setCityName(e.target.value) ;
-        }} />
-        <button type='submit'>Get Weather</button>
-      </form>
-      <div>
-      {weatherData && Array.isArray(weatherData.data) && weatherData.data.length > 0 && (
-        <>
-          <p>Temperature: {Math.round(weatherData.data[0].app_temp)}</p>
-          <p>City: {weatherData.data[0].city_name}</p>
-          </>
-        )}
+      <div className="weather">
+        <div className='weather-body'>
+          <h2 className='heading'>Weather App</h2>
+          <form action="" onSubmit={submitHandler}>
+            <input type="text" placeholder='Enter your city Name' className='input-field' onChange={(e) => {
+              setCityName(e.target.value);
+            }} />
+            <button type='submit' className='btn'>Get Weather</button>
+          </form>
+          <div className='weather-detail'>
+            {weatherData && Array.isArray(weatherData.data) && weatherData.data.length > 0 && (
+              <>
+                <h4>Temperature: {Math.round(weatherData.data[0].app_temp)}</h4>
+                <h4>City: {weatherData.data[0].city_name}</h4>
+              </>
+            )}
+          </div>
+        </div>
       </div>
     </>
   )
