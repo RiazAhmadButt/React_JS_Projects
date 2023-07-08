@@ -3,11 +3,8 @@ import { useState } from 'react';
 import './weather.css'
 
 export const Weather = () => {
-
   const [cityName, setCityName] = useState("");
   const [weatherData, setWeatherData] = useState({});
-
-
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("I am click handler")

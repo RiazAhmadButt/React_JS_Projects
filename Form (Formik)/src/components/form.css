@@ -1,0 +1,36 @@
+.form-body{
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(253, 253, 253);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.input-field label{
+    padding: 10px 0px;
+    font-size: 20px;
+}
+.input-field input{
+    padding: 5px;
+    font-size: 16px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(39, 183, 230);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.error{
+    color: red;
+}
